@@ -24,8 +24,8 @@ def shuffle_deck(deck):
 
 def deal_card(deck):
     """Removes and returns the top card from the deck."""
-    # TODO: Return a card and handle the edge case of an empty deck
-    pass
+    # Removes top card from deck that was generated previously, and returns it
+    return deck.pop()
 
 def calculate_score(hand):
     """
