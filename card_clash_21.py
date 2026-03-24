@@ -48,7 +48,7 @@ def calculate_score(hand):
 
 def show_hand(player_name, hand, hide_first_card=False):
     """Prints the formatted hand and current score for the user."""
-    # Display's the current player, score, and if they have a hidden card or not, along with what cards exactly they have
+    # Displays the current player, score, and if they have a hidden card or not, along with what cards exactly they have
     print(player_name + "'s hand: ")
     if hide_first_card: # Dealer
         print("Hidden")
