@@ -9,7 +9,7 @@ values = {
 
 def create_deck():
     """Returns a list of 52 tuples representing a standard deck: (rank, suit)"""
-    # Creates all 52 cards in the deck
+    # Creates all 52 cards in the deck and returns them
     deck = []
     for i in suits:
         for j in ranks:
@@ -50,12 +50,13 @@ def show_hand(player_name, hand, hide_first_card=False):
     """Prints the formatted hand and current score for the user."""
     # Display's the current player, score, and if they have a hidden card or not, along with what cards exactly they have
     print(player_name + "'s hand: ")
-    if hide_first_card:
+    if hide_first_card: # Dealer
         print("Hidden")
         for rank, suit in hand[1:]:
             print(rank + " of " + suit)
         print("Score: " + str(calculate_score(hand[1:])) + ", along with hidden card")
-    else:
+    
+    else: # Player
         for rank, suit in hand:
             print(rank + " of " + suit)
         print("Score: " + str(calculate_score(hand)))
@@ -115,6 +116,3 @@ def play_game():
 
 if __name__ == "__main__":
     play_game()
-
-
-
